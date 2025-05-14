@@ -2,10 +2,12 @@ package com.deloitte.deloitte.dto.model.dto;
 
 import com.deloitte.deloitte.dto.model.entity.Cliente;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@RequiredArgsConstructor
 public class ClienteDTO {
     private Long id;
     private String nome;

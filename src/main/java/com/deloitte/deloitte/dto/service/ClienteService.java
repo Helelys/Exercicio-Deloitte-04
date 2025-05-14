@@ -22,7 +22,6 @@ public class ClienteService {
         List<ClienteDTO> dtos = clientes.stream()
                 .map(ClienteDTO::new)
                 .toList();
-
         return ResponseEntity.ok(dtos);
     }
 
