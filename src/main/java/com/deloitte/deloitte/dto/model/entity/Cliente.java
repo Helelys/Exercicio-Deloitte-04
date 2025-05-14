@@ -18,12 +18,4 @@ public class Cliente {
     private Long id;
     private String nome;
     private String email;
-
-    @ManyToMany
-    @JoinTable(
-            name = "cliente_produto",
-            joinColumns = @JoinColumn(name = "cliente_id"),
-            inverseJoinColumns = @JoinColumn(name = "produto_id")
-    )
-    private List<Produto> produtos;
 }
