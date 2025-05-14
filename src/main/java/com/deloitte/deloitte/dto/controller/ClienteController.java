@@ -24,4 +24,9 @@ public class ClienteController {
     public ResponseEntity<ClienteDTO> criarCliente(@RequestBody ClienteDTO clienteDTO) {
         return clienteService.criarCliente(clienteDTO);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ClienteDTO> alterarCliente(@PathVariable Long id, @RequestBody ClienteDTO clienteDTO) {
+        return clienteService.alterarCliente(id, clienteDTO);
+    }
 }

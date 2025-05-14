@@ -11,15 +11,18 @@ import lombok.Setter;
 public class ProdutoDTO {
     private Long id;
     private String nomeDoProduto;
+    private double preco;
 
     public static Produto toEntity(ProdutoDTO produtoDTO) {
         Produto produto = new Produto();
         produto.setNomeDoProduto(produtoDTO.getNomeDoProduto());
+        produto.setPreco(produtoDTO.getPreco());
         return produto;
     }
 
     public ProdutoDTO(Produto produto) {
         this.id = produto.getId();
         this.nomeDoProduto = produto.getNomeDoProduto();
+        this.preco = produto.getPreco();
     }
 }

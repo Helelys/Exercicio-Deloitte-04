@@ -24,4 +24,9 @@ public class ProdutoController {
     public ResponseEntity<ProdutoDTO> criarProduto(@RequestBody ProdutoDTO produtoDTO) {
         return produtoService.criarProduto(produtoDTO);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProdutoDTO> alterarProduto(@PathVariable Long id, @RequestBody ProdutoDTO produtoDTO) {
+        return produtoService.alterarProduto(id, produtoDTO);
+    }
 }
