@@ -31,13 +31,6 @@ public class ComprasService {
         return ResponseEntity.ok(dtos);
     }
 
-    //Post
-    public ResponseEntity<ComprasDTO> criarCompras(@RequestBody ComprasDTO comprasDTO) {
-        Compras compras = ComprasDTO.toEntity(comprasDTO);
-        Compras salvar = comprasRepository.save(compras);
-        return ResponseEntity.ok(new ComprasDTO(salvar));
-    }
-
     //Compras
     public ResponseEntity<String> adicionarComprasParaCliente(Long clienteId, List<Long> produtoIds) {
         Cliente cliente = clienteRepository.findById(clienteId)

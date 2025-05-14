@@ -27,9 +27,4 @@ public class ComprasController {
     public ResponseEntity<List<ComprasDTO>> exibirTodasAsCompras() {
         return comprasService.exibirTodasAsCompras();
     }
-
-    @PostMapping
-    public ResponseEntity<ComprasDTO> criarCompras(@RequestBody ComprasDTO comprasDTO) {
-        return comprasService.criarCompras(comprasDTO);
-    }
 }
